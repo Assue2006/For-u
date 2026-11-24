@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For U ♡</title>
+    <style>
+        body {
+            background-color: #fff0f5;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 25px;
+            margin-top: 100px;
+        }
+        
+        h1 {
+            color: #d65b8a;
+        }
+        
+        p {
+            color: #999;
+        }
+        
+        button {
+            background: #e88baf;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+        }
+        
+        .hidden {
+            display: none;
+        }
+
+/* Floating hearts */
+body::before {
+    content: "♡  ♥  ♡  ♥  ♡";
+    position: fixed;
+    bottom: -40px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    color: #ff8fb1;
+    opacity: 0.7;
+    pointer-events: none;
+    animation: floatHearts 8s linear infinite;
+}
+@keyframes floatHearts {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100vh);
+    }
+    </style>
+</head>
+
+<body>
+    
+    <div class="container" id="first">
+        <h1>For U ♡</h1>
+        <p>I have something for you...</p>
+        <button onclick="openMessage()">ลองกดดูสิอ้วน ♡</button>
+    </div>
+    
+    <div class="container hidden" id="second">
+        <h1>Good morning ☀️</h1>
+        <p>Hope you have a lovely day!
+        <p>มีความสุขในทุกๆวันนะบังอ้วนนน😽
+        </p>
+    </div>
+    
+    <script>
+        
+    function openMessage() {
+    document.getElementById("first").classList.add("hidden");
+    document.getElementById("second").classList.remove("hidden");
+}
+    </script>
+    
+</body>
+
+</html>
